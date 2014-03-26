@@ -1,0 +1,12 @@
+common:
+	php:
+		date.timezone: Europe/Prague
+
+	parameters:
+		email: ondrakub@gmail.com
+
+	services:
+
+production < common:
+
+development < common:

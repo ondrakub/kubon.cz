@@ -1,0 +1,271 @@
+{layout "@layout.latte"}
+{block #content}
+
+	<header>
+
+		<div id="side">
+			<div id="logo">
+
+				<h1><a href="#profile">Ondřej <strong>Kubíček</strong></a></h1>
+
+				<h4 class="sub">Programátor.</h4>
+
+			</div>
+
+			<nav>
+
+				<ul class="regular">
+
+					<li class="nav_1"><a href="#profile">Profil<span></span></a></li>
+					<li class="nav_2"><a href="#skills">Dovednosti<span></span></a></li>
+					<li class="nav_3"><a href="#works">Práce<span></span></a></li>
+					<li class="nav_5"><a href="#contact">Kontakt<span></span></a></li>
+					<li><a href="en">english</a></li>
+
+				</ul>
+
+				<ul class="mobile">
+
+					<li class="nav_1"><a href="#profile"><span></span></a></li>
+					<li class="nav_2"><a href="#skills"><span></span></a></li>
+					<li class="nav_3"><a href="#works"><span></span></a></li>
+					<li class="nav_5"><a href="#contact"><span></span></a></li>
+					<li><a href="en">english</a></li>
+				</ul>
+
+			</nav>
+
+		</div>
+
+	</header>
+
+	<section id="main">
+
+		<div id="content">
+
+
+			<div id="profile" class="panel">
+
+				<img src="{$basePath}/images/ondrej-kubicek.jpg" alt="Ondřej Kubíček">
+
+				<div class="box">
+
+					<div class="in">
+
+						<div class="one-half">
+
+							<h5>Kdo jsem?</h5>
+
+							<p>Jsem programátor z České republiky, který miluje internet a nové technologie a jsem spokojeným majitelem Android zařízení.</p>
+
+						</div>
+
+						<div class="one-half column-last">
+
+							<h5>O mně</h5>
+
+							<p>V projektech, ve kterých jsem byl zapojen, jsem využíval hlavně PHP, ale jsem otevřen jakýmkoli jiným technologiím nebo programovacím jazykům. Má přidaná hodnota - nejsem závislý na zvolené technologii. Mám také zkušenosti s Pythonem a Javou.</p>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div id="skills" class="panel box">
+
+				<div class="in">
+
+					<h2>Dovednosti</h2>
+
+					<div class="skill"><h5>PHP</h5></div>
+					<div class="skill"><h5>HTML5</h5></div>
+					<div class="skill"><h5>CSS</h5></div>
+					<div class="skill"><h5>Javascript</h5></div>
+
+					<h4>Další dovednosti</h4>
+						<div class="one-half">
+							<ul class="check">
+								<li>API - Facebook, Google, Foursquare, Twitter atd</li>
+								<li>MySQL</li>
+								<li>MongoDB</li>
+								<li>Dart</li>
+							</ul>
+						</div>
+
+					<div class="one-half column-last">
+						<ul class="check">
+							<li>User Experience</li>
+							<li>User Interface</li>
+							<li>jQuery</li>
+							<li>Bootstrap</li>
+						</ul>
+					</div>
+
+
+				</div>
+
+			</div>
+
+			<div id="works" class="panel box">
+
+				<div class="in">
+
+					<h2>Práce</h2>
+
+
+							<ul class="work_items">
+
+								<li><a href="{$basePath}/images/works/kvz.png" title="KVZ Napajedla" rel="lightbox[works]"><img src="{$basePath}/images/works/kvz-s.png" alt="KVZ Napajedla"></a>
+
+									<div class="info">
+
+										<h4><a href="http://www.kvznapajedla.cz">KVZ Napajedla</a></h4>
+
+										<p></p>
+
+									</div>
+
+								</li>
+
+								<li><a href="{$basePath}/images/works/mistake.png" title="Mistake" rel="lightbox[works]"><img src="{$basePath}/images/works/mistake-s.png" alt="Mistake"></a>
+
+									<div class="info">
+
+										<h4><a href="http://www.mistake.cz">Mistake</a></h4>
+
+										<p></p>
+
+									</div>
+
+								</li>
+
+								<li><a href="{$basePath}/images/works/napskaut.png" title="Skauti Napajedla" rel="lightbox[works]"><img src="{$basePath}/images/works/napskaut-s.png" alt="Skauti Napajedla"></a>
+
+									<div class="info">
+
+										<h4><a href="http://www.napskaut.cz">Skauti Napajedla</a></h4>
+
+										<p></p>
+
+									</div>
+
+								</li>
+
+								<li><a href="{$basePath}/images/works/mpn.png" title="Městská policie Napajedla" rel="lightbox[works]"><img src="{$basePath}/images/works/mpn-s.png" alt="Městská policie Napajedla"></a>
+
+									<div class="info">
+
+										<h4><a href="http://www.mpnw.wz.cz">Městská policie Napajedla</a></h4>
+
+										<p></p>
+
+									</div>
+
+								</li>
+
+								<li>
+
+									<a href="{$basePath}/images/works/mobilheimzlin.png" title="Mobilheim Zlín" rel="lightbox[works]"><img src="{$basePath}/images/works/mobilheimzlin-s.png" alt="Mobilheim Zlín"></a>
+
+									<div class="info">
+
+										<h4><a href="#">Mobilheim Zlín</a></h4>
+
+										<p></p>
+
+									</div>
+
+								</li>
+
+							</ul>
+
+				</div>
+
+			</div>
+
+			<div id="contact" class="panel box">
+
+				<div class="in">
+
+					<h2>Kontakt</h2>
+
+					<div class="two-fifths">
+						<address>
+
+							Ondřej Kubíček<br>
+							Komenského 1081<br>
+							763 61 Napajedla<br>
+							<strong>E-mail:</strong> kubon@kubon.cz<br>
+							<strong>IČ: </strong>86917528
+
+						</address>
+
+						<ul id="social">
+
+							<li class="google"><a href="http://plus.google.com/114937915063768252625/">Google+</a></li>
+							<li class="facebook"><a href="http://facebook.com/ondrakub/">Facebook</a></li>
+							<li class="twitter"><a href="http://twitter.com/ondrakub">Twitter</a></li>
+							<li class="linkedin"><a href="http://www.linkedin.com/in/ondrakub">LinkedIn</a></li>
+
+						</ul>
+
+					</div>
+
+					<div class="three-fifths column-last">
+
+
+						<!-- BEGIN #contact_form -->
+						<form id="contact_form" onsubmit="return validate_form()" method="post">
+							<div id="loader"></div>
+							<p>
+								<label>Jméno</label>
+								<input onfocus="jQuery('#name_error').fadeOut('fast');" onclick="jQuery('#name_error').fadeOut('fast');" type="text" name="name" id="name">
+							</p>
+
+
+							<p>
+								<label>E-mail</label>
+								<input onfocus="jQuery('#email_error').fadeOut('fast');" onclick="jQuery('#email_error').fadeOut('fast');" type="text" name="email" id="email">
+							</p>
+
+							<p>
+								<label>Zpráva</label>
+								<textarea onfocus="jQuery('#message_error').fadeOut('fast');" onclick="jQuery('#message_error').fadeOut('fast');" id="message" rows="8" cols="20"></textarea>
+							</p>
+
+					       <button type="submit" name="submit" id="submit_button" class="btn"><span>Odeslat zprávu</span></button>
+
+						</form>
+						<h3 class="center" id="sent_message">Zpráva odeslána!</h3>
+					</div>
+
+				</div>
+
+			</div>
+
+			<div id="nomore" class="panel box">
+
+				<div class="in center">
+
+					<h2>Nic víc tu není, kam chceš jít?</h2>
+
+					<h5><a href="#profile">Vrať se nahoru</a> nebo použij navigaci vlevo.</h5>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</section>
+
+	<footer>
+
+		<p>&copy; Ondřej Kubíček.</p>
+
+	</footer>
+
+	<a href="#profile" class="jump">Nahoru</a>
