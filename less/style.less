@@ -1,0 +1,70 @@
+//@import 'jquery.fullPage';
+html {
+	height: 100%;
+}
+body {
+	margin: 0;
+    padding: 0;
+	overflow:hidden;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+.profile {
+	background-image: data-uri('../imgs/me_profile.jpg');
+	background-size: contain;
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+	margin-right: 15px;
+}
+/* Style for our header texts
+* --------------------------------------- */
+h1 {
+	font-size: 5em;
+	font-weight: 300;
+	margin:0;
+	padding:0;
+	display: inline-flex;
+	line-height: 2.5;
+}
+h2 {
+	font-size: 3em;
+	font-weight: 300;
+}
+
+section {
+	text-align:center;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 5000;
+	position: relative;
+	display: table;
+
+    .inner {
+		display: table-cell;
+	    vertical-align: middle;
+
+    }
+}
+
+.bg {
+	background-image: url(../imgs/bg.jpg);
+	background-size: cover;
+	width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+
+	.overlay {
+		top: 0;
+		height: 100%;
+		background-color: rgba(0,0,0,0);
+	    background-image: -webkit-linear-gradient(rgba(0,0,0,0.4) 0%,rgba(0,0,0,.6) 75%,rgba(0,0,0,.8) 100%);
+	    background-image: linear-gradient(rgba(0,0,0,0.4) 0%,rgba(0,0,0,.6) 75%,rgba(0,0,0,.8) 100%);
+	}
+}
