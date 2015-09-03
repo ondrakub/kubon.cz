@@ -1,4 +1,3 @@
-//@import 'jquery.fullPage';
 html {
 	height: 100%;
 }
@@ -11,28 +10,6 @@ body {
     width: 100%;
     height: 100%;
     color: #fff;
-}
-.profile {
-	background-image: data-uri('../imgs/me_profile.jpg');
-	background-size: contain;
-	border-radius: 50%;
-	width: 200px;
-	height: 200px;
-	margin-right: 15px;
-}
-/* Style for our header texts
-* --------------------------------------- */
-h1 {
-	font-size: 5em;
-	font-weight: 300;
-	margin:0;
-	padding:0;
-	display: inline-flex;
-	line-height: 2.5;
-}
-h2 {
-	font-size: 3em;
-	font-weight: 300;
 }
 
 section {
@@ -47,12 +24,35 @@ section {
     .inner {
 		display: table-cell;
 	    vertical-align: middle;
-
     }
 }
 
+h1 {
+	font-size: 5em;
+	font-weight: 300;
+	margin:0;
+	padding:0;
+	display: inline-flex;
+	line-height: 2.5;
+
+	.profile {
+		background-image: data-uri('img/ondrej-kubicek.jpg');
+		background-size: contain;
+		border-radius: 50%;
+		width: 200px;
+		height: 200px;
+		margin-right: 15px;
+	}
+}
+
+h2 {
+	font-size: 3em;
+	font-weight: 300;
+}
+
+
 .bg {
-	background-image: url(../imgs/bg.jpg);
+	background-image: url('img/bg.jpg');
 	background-size: cover;
 	width: 100%;
     height: 100%;
@@ -66,5 +66,19 @@ section {
 		background-color: rgba(0,0,0,0);
 	    background-image: -webkit-linear-gradient(rgba(0,0,0,0.4) 0%,rgba(0,0,0,.6) 75%,rgba(0,0,0,.8) 100%);
 	    background-image: linear-gradient(rgba(0,0,0,0.4) 0%,rgba(0,0,0,.6) 75%,rgba(0,0,0,.8) 100%);
+	}
+}
+
+@media (max-width: 800px) {
+	h1 {
+		line-height: 1.2;
+		display: inline-block;
+
+		.profile {
+			display: block;
+			margin: 0 auto;
+			width: 100px;
+			height: 100px;
+		}
 	}
 }

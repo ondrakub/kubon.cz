@@ -14,6 +14,7 @@ module.exports = function (grunt) {
           production: {
             options: {
               paths: ["assets"],
+              compress: true,
               cleancss: true
             },
             files: {
