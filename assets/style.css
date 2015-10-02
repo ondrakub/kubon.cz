@@ -11,6 +11,12 @@ body {
   height: 100%;
   color: #fff;
 }
+a {
+  color: #fff;
+}
+a:hover {
+  text-decoration: none;
+}
 section {
   text-align: center;
   padding: 0;
