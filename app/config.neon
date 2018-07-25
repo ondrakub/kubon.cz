@@ -1,2 +1,21 @@
 php:
 	date.timezone: Europe/Prague
+
+application:
+	scanDirs: no
+
+http:
+	csp:
+		script-src: [
+			strict-dynamic
+			nonce
+			"http: https:; object-src 'none'; base-uri 'none';"
+			report-uri https://kubon.report-uri.com/r/d/csp/enforce
+		]
+	headers:
+		server: kubon.cz
+		X-XSS-Protection: '1; mode=block; report=https://kubon.report-uri.com/r/d/xss/enforce'
+		X-Content-Type-Options: nosniff
+		referrer-policy: 'no-referrer, strict-origin-when-cross-origin'
+		feature-policy: "accelerometer 'none'; camera 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; usb 'none'"
+		expect-ct: 'max-age=0, report-uri="https://kubon.report-uri.com/r/d/ct/reportOnly"'

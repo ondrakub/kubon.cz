@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types = 1);
 //require ".maintenance.php";
 
 // Load libraries
@@ -23,19 +23,22 @@ $container = $configurator->createContainer();
 
 $router = $container->getService('router');
 $router[] = new Nette\Application\Routers\Route('[<lang (?-i)cs|en>]', function($presenter, $lang) use ($container) {
-    $httpRequest = $container->getService('httpRequest');
-
     if (!$lang) {
-        $lang = $httpRequest->detectLanguage(array('en', 'cs')) ?: 'cs';
+        $lang = $container->getService('httpRequest')->detectLanguage(array('en', 'cs')) ?: 'cs';
         return $presenter->redirectUrl($lang);
     }
 
+    $header = $container->getService('httpResponse')->getHeader('Content-Security-Policy');
 
     // create template
-    $template = $presenter->createTemplate()
-        ->setFile(__DIR__ . '/app/' . $lang . '.latte');
+    /** @var \Nette\Bridges\ApplicationLatte\Template $template */
+    $template = $presenter->createTemplate();
+    $latte = $template->getLatte();
+    preg_match('#\s\'nonce-([\w+/]+=*)\'#', (string) $header, $m);
+    $latte->addProvider('uiNonce', $m[1]);
+    Nette\Bridges\ApplicationLatte\UIMacros::install($latte->getCompiler());
 
-    return $template;
+    return $template->setFile(__DIR__ . '/app/' . $lang . '.latte');
 });
 
 
